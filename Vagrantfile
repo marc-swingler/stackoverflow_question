@@ -8,6 +8,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	# Avoid the "stdin: is not a tty" message
 	config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
 	config.vm.provision "chef_solo" do |chef|
-		chef.add_recipe("my_cookbook")
+		chef.roles_path = "roles"
+		chef.add_role("my_role")
+		#chef.add_recipe("my_cookbook")
 	end
 end

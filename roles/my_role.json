@@ -1,0 +1,20 @@
+{
+  "name": "my_role",
+  "description": "",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+    "blah": {
+        "version": "24.4.1"
+    }
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[my_cookbook]"
+  ],
+  "env_run_lists": {
+
+  }
+}
